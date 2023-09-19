@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader :specialties="store.specialties" />
   <AppMain />
   <AppFooter />
 </template>

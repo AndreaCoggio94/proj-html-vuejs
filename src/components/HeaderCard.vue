@@ -11,6 +11,12 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+  <div>
+    <img :src="'/svg/' + svg" alt="" />
+    <h4>{{ title }}</h4>
+    <p>{{ cont }}</p>
+  </div>
+</template>
 
 <style lang="scss" scoped></style>

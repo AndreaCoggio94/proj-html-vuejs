@@ -10,6 +10,9 @@ export default {
     NavBar,
     HeaderCard,
   },
+  props: {
+    specialties: Array,
+  },
 };
 </script>
 
@@ -39,7 +42,12 @@ export default {
       <h2>Our specialties <span class="dot">.</span></h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
       <div class="d-flex">
-        <HeaderCard />
+        <HeaderCard
+          v-for="card in specialties"
+          :title="card.title"
+          :cont="card.cont"
+          :svg="card.svg"
+        />
       </div>
     </div>
   </div>
