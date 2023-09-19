@@ -153,7 +153,25 @@ export default {
     </div>
   </div>
   <!-- Testimonials -->
-  <div class="testimonials"></div>
+  <div class="testimonials">
+    <div class="background">
+      <h1>Testimonials.</h1>
+    </div>
+    <div class="testimonials-carousel">
+      <div class="button">arrow</div>
+      <div class="carousel">
+        <img src="h3-img-04.png" alt="" />
+        <h4>Cynthia Clark</h4>
+        <p>
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          cupiditate magni veritatis nisi quae aliquid quaerat, perspiciatis,
+          quos perferendis, quisquam earum enim harum quis provident expedita
+          iure optio soluta quo!"
+        </p>
+      </div>
+      <div class="button">arrow</div>
+    </div>
+  </div>
   <!-- Video Jumbotron -->
   <div class="video-jumbotron">
     <img src="/image/h1-img-04.jpg" alt="" />
@@ -223,6 +241,31 @@ export default {
       flex-grow: 1;
       display: flex;
       justify-content: space-around;
+      .card {
+        width: 18rem;
+      }
+    }
+  }
+}
+
+.testimonials {
+  .background {
+    color: black;
+    background-color: rgb(45, 42, 42);
+    h1 {
+      font-size: 10rem;
+      text-align: center;
+    }
+  }
+  .testimonials-carousel {
+    text-align: start;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    .carousel {
+      // flex-grow: 1;
+      // display: flex;
+      // justify-content: space-around;
       .card {
         width: 18rem;
       }
