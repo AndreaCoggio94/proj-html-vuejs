@@ -55,5 +55,7 @@ export default {
 
 <style lang="scss" scoped>
 .jumbotron {
+  height: 500px;
+  background-color: aquamarine;
 }
 </style>
