@@ -24,6 +24,7 @@ export default {
         rows="3"
       ></textarea>
     </div>
+    <button class="btn btn-success" type="submit">Send</button>
   </form>
 </template>
 
