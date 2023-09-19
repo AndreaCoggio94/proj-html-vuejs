@@ -152,6 +152,13 @@ export default {
       <div class="button">arrow</div>
     </div>
   </div>
+  <!-- Testimonials -->
+  <div class="testimonials"></div>
+  <!-- Video Jumbotron -->
+  <div class="video-jumbotron">
+    <img src="/image/h1-img-04.jpg" alt="" />
+    <div class="play">play</div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -220,6 +227,20 @@ export default {
         width: 18rem;
       }
     }
+  }
+}
+
+.video-jumbotron {
+  position: relative;
+  img {
+    width: 100%;
+  }
+  .play {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    color: white;
   }
 }
 </style>
