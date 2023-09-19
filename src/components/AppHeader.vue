@@ -1,6 +1,6 @@
 <script>
-import NavBar from "./NavBar.vue";
-import HeaderCard from "./HeaderCard.vue";
+import NavBar from "./header/NavBar.vue";
+import HeaderCard from "./header/HeaderCard.vue";
 
 export default {
   data() {
@@ -56,6 +56,6 @@ export default {
 <style lang="scss" scoped>
 .jumbotron {
   height: 500px;
-  background-color: aquamarine;
+  background-image: url("/image/rev-slider-main-home-img-03.jpg");
 }
 </style>

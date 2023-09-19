@@ -6,6 +6,9 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+  <!-- Team Members -->
+  <div class="team-members"></div>
+</template>
 
 <style lang="scss" scoped></style>
