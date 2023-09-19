@@ -106,6 +106,52 @@ export default {
       </div>
     </div>
   </div>
+  <!-- Latest news -->
+  <div class="news">
+    <div class="news-title">
+      <h2>Latest news<span class="dot">.</span></h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="news-carousel">
+      <div class="button">arrow</div>
+      <div class="carousel">
+        <div class="card">
+          <img class="card-img-top" src="..." alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="..." alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="..." alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="button">arrow</div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -148,10 +194,30 @@ export default {
       .bar {
         border-bottom: 4px solid gray;
         position: relative;
+        border-radius: 50px;
         .over-bar {
           position: absolute;
           border-bottom: 4px solid orange;
+          border-radius: 50px;
         }
+      }
+    }
+  }
+}
+
+.news {
+  text-align: center;
+  .news-carousel {
+    text-align: start;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    .carousel {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-around;
+      .card {
+        width: 18rem;
       }
     }
   }
