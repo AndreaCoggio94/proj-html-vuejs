@@ -16,6 +16,7 @@ export default {
   <div class="container">
     <TeamCard />
   </div>
+  <!-- Jumbotron -->
   <div class="jumbotron">
     <img src="/image/h1-img-09.jpg" alt="" />
     <div class="container">
@@ -58,6 +59,53 @@ export default {
       </div>
     </div>
   </div>
+  <!-- Creative -->
+  <div class="creative">
+    <div class="container d-flex">
+      <div class="col-6">
+        <h4>Creative Leader<span class="dot">.</span></h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+          facere, architecto reprehenderit at eius deleniti vitae accusantium
+          soluta illum eos voluptas in optio et sit vero explicabo molestias,
+          cupiditate laborum!
+        </p>
+        <div>READ MORE</div>
+      </div>
+      <div class="col-6">
+        <ul>
+          <li>
+            <h5 class="col">Mentorship</h5>
+            <h5 class="col number">78%</h5>
+            <div class="bar col-12">
+              <div class="over-bar" style="width: 78%"></div>
+            </div>
+          </li>
+          <li>
+            <h5 class="col">Education</h5>
+            <h5 class="col number">95%</h5>
+            <div class="bar col-12">
+              <div class="over-bar" style="width: 95%"></div>
+            </div>
+          </li>
+          <li>
+            <h5 class="col">Learning</h5>
+            <h5 class="col number">65%</h5>
+            <div class="bar col-12">
+              <div class="over-bar" style="width: 65%"></div>
+            </div>
+          </li>
+          <li>
+            <h5 class="col">Motivation</h5>
+            <h5 class="col number">83%</h5>
+            <div class="bar col-12">
+              <div class="over-bar" style="width: 83%"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -81,6 +129,29 @@ export default {
 
       h4 {
         font-size: 1rem;
+      }
+    }
+  }
+}
+
+.creative {
+  ul {
+    li {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      // width: 100%;
+      // background-color: red;
+      .number {
+        text-align: end;
+      }
+      .bar {
+        border-bottom: 4px solid gray;
+        position: relative;
+        .over-bar {
+          position: absolute;
+          border-bottom: 4px solid orange;
+        }
       }
     }
   }
