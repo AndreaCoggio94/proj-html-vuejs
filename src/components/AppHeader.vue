@@ -1,5 +1,6 @@
 <script>
 import NavBar from "./NavBar.vue";
+import HeaderCard from "./HeaderCard.vue";
 
 export default {
   data() {
@@ -7,6 +8,7 @@ export default {
   },
   components: {
     NavBar,
+    HeaderCard,
   },
 };
 </script>
@@ -37,26 +39,7 @@ export default {
       <h2>Our specialties <span class="dot">.</span></h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
       <div class="d-flex">
-        <div class="element">
-          <svg></svg>
-          <h4>Lorem</h4>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-        </div>
-        <div class="element">
-          <svg></svg>
-          <h4>Lorem</h4>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-        </div>
-        <div class="element">
-          <svg></svg>
-          <h4>Lorem</h4>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-        </div>
-        <div class="element">
-          <svg></svg>
-          <h4>Lorem</h4>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-        </div>
+        <HeaderCard />
       </div>
     </div>
   </div>
