@@ -233,6 +233,7 @@ export default {
       <h1>Testimonials.</h1>
       <div class="testimonials-carousel">
         <div class="button">arrow</div>
+
         <TestimonialCard
           v-for="(card, index) in testimonials"
           :index="index"
@@ -240,7 +241,26 @@ export default {
           :desc="card.desc"
           :img="card.img"
           :activeIndex="testimonialsActiveIndex"
-        />
+        >
+          <div class="amount-counter">
+            <p>01</p>
+            <div class="show">
+              <div
+                :class="0 == index ? 'active' : 'hidden'"
+                class="col-4"
+              ></div>
+              <div
+                :class="1 == index ? 'active' : 'hidden'"
+                class="col-4"
+              ></div>
+              <div
+                :class="2 == index ? 'active' : 'hidden'"
+                class="col-4"
+              ></div>
+            </div>
+            <p>03</p>
+          </div>
+        </TestimonialCard>
         <div class="button">arrow</div>
       </div>
     </div>
@@ -370,6 +390,33 @@ export default {
       align-items: center;
       display: flex;
       justify-content: space-between;
+      color: white;
+      .button {
+      }
+      .amount-counter {
+        display: flex;
+        justify-content: space-between;
+        width: 20%;
+        padding-top: 2rem;
+        margin: auto;
+        align-items: center;
+        .show {
+          background-color: black;
+          height: 2px;
+          width: 60%;
+          display: flex;
+          // position: relative;
+          .active {
+            // position: ;
+            background-color: grey;
+            height: 2px;
+          }
+          .hidden {
+            background-color: black;
+            height: 2px;
+          }
+        }
+      }
     }
   }
 }

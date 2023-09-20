@@ -23,13 +23,14 @@ export default {
     <p>
       {{ desc }}
     </p>
+    <slot></slot>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .carousel-card {
   text-align: center;
-  color: white;
+
   img {
     width: 6rem;
   }
