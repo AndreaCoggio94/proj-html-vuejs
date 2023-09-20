@@ -1,5 +1,6 @@
 <script>
 import TeamCard from "./main/TeamCard.vue";
+import NewsCard from "./main/NewsCard.vue";
 
 export default {
   data() {
@@ -7,6 +8,7 @@ export default {
   },
   components: {
     TeamCard,
+    NewsCard,
   },
 };
 </script>
@@ -124,7 +126,8 @@ export default {
       <div class="news-carousel">
         <div class="button">arrow</div>
         <div class="carousel">
-          <div class="card">
+          <NewsCard />
+          <!-- <div class="card">
             <img class="card-img-top" src="..." alt="Card image cap" />
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -155,8 +158,8 @@ export default {
                 the bulk of the card's content.
               </p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+            </div> -->
+          <!-- </div> -->
         </div>
         <div class="button">arrow</div>
       </div>
@@ -282,9 +285,6 @@ export default {
       flex-grow: 1;
       display: flex;
       justify-content: space-around;
-      .card {
-        width: 18rem;
-      }
     }
   }
 }
