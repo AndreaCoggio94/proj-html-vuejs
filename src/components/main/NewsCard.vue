@@ -3,19 +3,30 @@ export default {
   data() {
     return {};
   },
+  props: {
+    image: String,
+    title: String,
+    desc: String,
+    date: String,
+    person: String,
+    index: Number,
+    activeIndex: Array,
+  },
 };
 </script>
 
 <template>
-  <div class="news-card">
-    <img class="" src="/image/h1-blog-img-04.jpg" alt="Card image cap" />
+  <div
+    class="news-card"
+    :class="activeIndex.includes(index) ? 'active' : 'hidden'"
+  >
+    <img class="" :src="'/image/' + image" :alt="image" />
     <div class="card-body">
-      <span> icon May 5, 2019</span><span>icon Amanda Doe</span>
-      <h5 class="card-title">Card title</h5>
+      <span> icon {{ date }}</span
+      ><span>icon {{ person }}</span>
+      <h5 class="card-title">{{ title }}</h5>
       <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-        <!-- text.substring(0, 8) + "..."; -->
+        {{ desc }}
       </p>
       <a href="#" class="btn">READ MORE</a>
     </div>
@@ -29,7 +40,9 @@ export default {
 
   padding: 3rem 0 0;
   position: relative;
-
+  &.hidden {
+    display: none;
+  }
   img {
     margin-bottom: 1rem;
   }

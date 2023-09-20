@@ -4,7 +4,39 @@ import NewsCard from "./main/NewsCard.vue";
 
 export default {
   data() {
-    return {};
+    return {
+      newsActiveIndex: [0, 1, 2],
+      news: [
+        {
+          image: "h1-blog-img-04.jpg",
+          title: "Team Building",
+          desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, laudantium voluptate enim mollitia pariatur ipsam.",
+          date: "May 5, 2019",
+          person: "Amanda Doe",
+        },
+        {
+          image: "h1-blog-img-01.jpg",
+          title: "New Business Day",
+          desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, laudantium voluptate enim mollitia pariatur ipsam.",
+          date: "May 5, 2019",
+          person: "Amanda Doe",
+        },
+        {
+          image: "h1-blog-img-03.jpg",
+          title: "Next Investment",
+          desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, laudantium voluptate enim mollitia pariatur ipsam.",
+          date: "May 5, 2019",
+          person: "Amanda Doe",
+        },
+        {
+          image: "h1-blog-img-02.jpg",
+          title: "Lorem Ipsum",
+          desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, laudantium voluptate enim mollitia pariatur ipsam.",
+          date: "May 5, 2019",
+          person: "Amanda Doe",
+        },
+      ],
+    };
   },
   components: {
     TeamCard,
@@ -126,7 +158,17 @@ export default {
       <div class="news-carousel">
         <div class="button">arrow</div>
         <div class="carousel">
-          <NewsCard />
+          <NewsCard
+            v-for="(card, index) in news"
+            :image="card.image"
+            :title="card.title"
+            :desc="card.desc.substring(0, 50) + '...'"
+            :date="card.date"
+            :person="card.person"
+            :key="index"
+            :index="index"
+            :activeIndex="newsActiveIndex"
+          />
           <!-- <div class="card">
             <img class="card-img-top" src="..." alt="Card image cap" />
             <div class="card-body">
