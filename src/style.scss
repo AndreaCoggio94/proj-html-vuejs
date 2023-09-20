@@ -1,6 +1,8 @@
 // variables
 
-$myColor: red;
+$color-primary: #0074d9;
+$color-secondary: #7fdbff;
+$color-tertiary: #39cccc;
 
 // ## Reset
 
@@ -35,7 +37,7 @@ img {
 }
 
 body {
-  background-color: aqua;
+  // background-color: $color-secondary;
 }
 
 .line {

@@ -18,7 +18,7 @@ export default {
     AppHeader,
     AppMain,
     AppFooter,
-    SvgTest,
+    // SvgTest,
   },
 };
 </script>
