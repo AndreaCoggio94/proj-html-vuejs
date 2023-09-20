@@ -51,10 +51,16 @@ img {
 
 .container-small {
   width: 70%;
+  margin: auto;
 }
 
 body {
   background-color: $background-grey-primary;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .line {
