@@ -37,7 +37,7 @@ img {
 }
 
 .button {
-  background-color: orange;
+  background-color: #ff4612;
   display: inline-block;
   position: absolute;
   &.prev {

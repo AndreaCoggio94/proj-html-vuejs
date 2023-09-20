@@ -1,7 +1,17 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      pages: [
+        { page: "Homes" },
+        { page: "Pages" },
+        { page: "Blogs" },
+        { page: "Shops" },
+        { page: "Events" },
+        { page: "Elements" },
+      ],
+      activeIndex: 0,
+    };
   },
 };
 </script>
@@ -11,24 +21,14 @@ export default {
     <nav class="navbar">
       <a class="navbar-brand" href="#">Navbar</a>
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Homes</a>
+        <li
+          v-for="(card, index) in pages"
+          class="nav-item"
+          :class="index == activeIndex ? 'active' : ''"
+        >
+          <a class="nav-link" href="#"> {{ card.page }} </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pages</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Blogs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Shops</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Elements</a>
-        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="#">search</a>
         </li>
@@ -54,6 +54,14 @@ export default {
       justify-content: space-between;
       width: 60%;
       .nav-item {
+        &.active {
+          a {
+            color: #ff4612;
+            &::before {
+              content: "->";
+            }
+          }
+        }
       }
     }
   }

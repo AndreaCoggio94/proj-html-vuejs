@@ -235,7 +235,7 @@ footer {
     }
   }
   .copyright {
-    background-color: orange;
+    background-color: #ff4612;
     text-align: center;
     justify-content: center;
     align-items: center;

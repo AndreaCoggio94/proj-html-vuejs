@@ -345,7 +345,7 @@ export default {
         border-radius: 50px;
         .over-bar {
           position: absolute;
-          border-bottom: 4px solid orange;
+          border-bottom: 4px solid #ff4612;
           border-radius: 50px;
         }
       }
