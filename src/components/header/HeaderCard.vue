@@ -12,11 +12,22 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="header-card">
     <img :src="'/svg/' + svg" alt="" />
     <h4>{{ title }}</h4>
     <p>{{ cont }}</p>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.header-card {
+  text-align: center;
+
+  img {
+    width: 8rem;
+  }
+  p {
+    width: 6rem;
+  }
+}
+</style>

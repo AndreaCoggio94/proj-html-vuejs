@@ -1,3 +1,7 @@
+// variables
+
+$myColor: red;
+
 // ## Reset
 
 * {
@@ -16,4 +20,43 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.container-big {
+  width: 90%;
+}
+
+.container-small {
+  width: 70%;
+}
+
+body {
+  background-color: aqua;
+}
+
+.line {
+  &::after {
+    content: " ";
+    background-color: orange;
+    height: 2px;
+    width: 10%;
+    display: block;
+    margin-top: 1.2rem;
+  }
+}
+
+.line-center {
+  &::after {
+    margin: auto;
+    content: " ";
+    background-color: orange;
+    height: 2px;
+    width: 10%;
+    display: block;
+    margin-top: 1.2rem;
+  }
 }

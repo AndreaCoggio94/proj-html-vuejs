@@ -14,7 +14,7 @@ export default {
 <template>
   <!-- Team Members -->
   <div class="container">
-    <TeamCard />
+    <TeamCard></TeamCard>
   </div>
   <!-- Jumbotron -->
   <div class="jumbotron">
