@@ -22,12 +22,13 @@ export default {
 <style lang="scss" scoped>
 .header-card {
   text-align: center;
+  margin: 1rem 0.5rem 0;
 
   img {
     width: 8rem;
   }
   p {
-    width: 6rem;
+    // width: 6rem;
   }
 }
 </style>
