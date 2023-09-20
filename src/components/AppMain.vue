@@ -13,8 +13,10 @@ export default {
 
 <template>
   <!-- Team Members -->
-  <div class="container">
-    <TeamCard></TeamCard>
+  <div class="team-members">
+    <div class="container-small">
+      <TeamCard></TeamCard>
+    </div>
   </div>
   <!-- Jumbotron -->
   <div class="jumbotron">
@@ -180,6 +182,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.team-members {
+  margin: 2rem 0 8rem;
+  .container-small {
+    margin: auto;
+    position: relative;
+  }
+}
+
 .jumbotron {
   position: relative;
   img {
