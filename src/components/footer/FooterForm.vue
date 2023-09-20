@@ -17,8 +17,8 @@ export default {
       </div>
     </div>
     <div class="form-group">
-      <label for="exampleFormControlTextarea1">Example textarea</label>
       <textarea
+        placeholder="Write a message.."
         class="form-control"
         id="exampleFormControlTextarea1"
         rows="3"

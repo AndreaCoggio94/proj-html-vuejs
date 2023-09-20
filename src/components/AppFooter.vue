@@ -8,6 +8,11 @@ export default {
   components: {
     FooterForm,
   },
+  methods: {
+    questa(event) {
+      console.log(event);
+    },
+  },
 };
 </script>
 
@@ -26,11 +31,35 @@ export default {
         <FooterForm />
       </div>
       <div class="col-12">
-        <img src="/image/h4-clients-img-03.png" alt="logo" />
-        <img src="/image/h4-clients-img-05.png" alt="logo" />
-        <img src="/image/h4-clients-img-07.png" alt="logo" />
-        <img src="/image/h4-clients-img-09.png" alt="logo" />
-        <img src="/image/h4-clients-img-01.png" alt="logo" />
+        <!-- <span v-for="(n, index) in 10">
+          <img
+            :src="n % 2 ? '/image/h4-clients-img-0' + n + '.png' : ''"
+            @click="questa"
+            alt=""
+          />
+        </span> -->
+        <!-- <img v-for="n in 10" src="" alt="" /> -->
+        <div class="logo">
+          <img class="active" src="/image/h4-clients-img-03.png" alt="logo" />
+
+          <img class="hidden" src="/image/h4-clients-img-04-1.png" alt="logo" />
+        </div>
+        <div class="logo">
+          <img class="active" src="/image/h4-clients-img-05.png" alt="logo" />
+          <img class="hidden" src="/image/h4-clients-img-06-1.png" alt="logo" />
+        </div>
+        <div class="logo">
+          <img class="active" src="/image/h4-clients-img-07.png" alt="logo" />
+          <img class="hidden" src="/image/h4-clients-img-08-1.png" alt="logo" />
+        </div>
+        <div class="logo">
+          <img class="active" src="/image/h4-clients-img-09.png" alt="logo" />
+          <img class="hidden" src="/image/h4-clients-img-10-1.png" alt="logo" />
+        </div>
+        <div class="logo">
+          <img class="active" src="/image/h4-clients-img-01.png" alt="logo" />
+          <img class="hidden" src="/image/h4-clients-img-02.png" alt="logo" />
+        </div>
       </div>
     </div>
   </div>
@@ -104,6 +133,20 @@ export default {
   display: flex;
   flex-wrap: wrap;
   padding-top: 4rem;
+  .logo {
+    .hidden {
+      display: none;
+    }
+
+    &:hover {
+      .active {
+        display: none;
+      }
+      .hidden {
+        display: block;
+      }
+    }
+  }
   .col-6 {
     img {
       width: 100%;
@@ -124,7 +167,11 @@ export default {
 footer {
   background-color: black;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   .container {
+    padding: 4rem 0;
     display: flex;
     justify-content: space-between;
     .footer-item {
@@ -143,9 +190,15 @@ footer {
       }
     }
   }
-}
-.copyright {
-  background-color: orange;
-  text-align: center;
+  .copyright {
+    background-color: orange;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    p {
+      margin: 0;
+    }
+  }
 }
 </style>
