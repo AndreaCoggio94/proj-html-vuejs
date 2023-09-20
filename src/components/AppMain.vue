@@ -1,6 +1,7 @@
 <script>
 import TeamCard from "./main/TeamCard.vue";
 import NewsCard from "./main/NewsCard.vue";
+import TestimonialCard from "./main/TestimonialCard.vue";
 
 export default {
   data() {
@@ -36,11 +37,30 @@ export default {
           person: "Amanda Doe",
         },
       ],
+      testimonialsActiveIndex: 1,
+      testimonials: [
+        {
+          name: "Cynthia Clark",
+          desc: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cupiditate magni veritatis nisi quae aliquid quaerat, perspiciatis, quos perferendis, quisquam earum enim harum quis provident expedita iure optio soluta quo!"',
+          img: "h3-img-04.png",
+        },
+        {
+          name: "Cynthia Clark",
+          desc: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cupiditate magni veritatis nisi quae aliquid quaerat, perspiciatis, quos perferendis, quisquam earum enim harum quis provident expedita iure optio soluta quo!"',
+          img: "h3-img-07.png",
+        },
+        {
+          name: "Cynthia Clark",
+          desc: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cupiditate magni veritatis nisi quae aliquid quaerat, perspiciatis, quos perferendis, quisquam earum enim harum quis provident expedita iure optio soluta quo!"',
+          img: "h3-img-08.png",
+        },
+      ],
     };
   },
   components: {
     TeamCard,
     NewsCard,
+    TestimonialCard,
   },
 };
 </script>
@@ -211,20 +231,18 @@ export default {
   <div class="testimonials">
     <div class="background">
       <h1>Testimonials.</h1>
-    </div>
-    <div class="testimonials-carousel">
-      <div class="button">arrow</div>
-      <div class="carousel">
-        <img src="h3-img-04.png" alt="" />
-        <h4>Cynthia Clark</h4>
-        <p>
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-          cupiditate magni veritatis nisi quae aliquid quaerat, perspiciatis,
-          quos perferendis, quisquam earum enim harum quis provident expedita
-          iure optio soluta quo!"
-        </p>
+      <div class="testimonials-carousel">
+        <div class="button">arrow</div>
+        <TestimonialCard
+          v-for="(card, index) in testimonials"
+          :index="index"
+          :name="card.name"
+          :desc="card.desc"
+          :img="card.img"
+          :activeIndex="testimonialsActiveIndex"
+        />
+        <div class="button">arrow</div>
       </div>
-      <div class="button">arrow</div>
     </div>
   </div>
   <!-- Video Jumbotron -->
@@ -335,23 +353,23 @@ export default {
   .background {
     color: black;
     background-color: rgb(45, 42, 42);
+    position: relative;
+    padding-bottom: 20rem;
     h1 {
       font-size: 10rem;
       text-align: center;
     }
-  }
-  .testimonials-carousel {
-    text-align: start;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    .carousel {
-      // flex-grow: 1;
-      // display: flex;
-      // justify-content: space-around;
-      .card {
-        width: 18rem;
-      }
+    .testimonials-carousel {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      top: 0;
+      bottom: 0;
+      text-align: start;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
     }
   }
 }
