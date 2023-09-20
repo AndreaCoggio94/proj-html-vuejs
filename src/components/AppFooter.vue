@@ -20,8 +20,16 @@ export default {
   <!-- contact us section -->
   <div class="container">
     <div class="contact-us">
-      <div class="col-6">
+      <div class="col-6 world">
         <img src="/image/h1-contact-rev-01.png" alt="" />
+
+        <img class="new-york" src="/image/h1-contact-rev-02.png" alt="" />
+        <img class="helsinki" src="/image/h1-contact-rev-02.png" alt="" />
+        <img class="sydney" src="/image/h1-contact-rev-02.png" alt="" />
+        <div class="info">
+          <h6>New York Coaching</h6>
+          <p>READ MORE</p>
+        </div>
       </div>
       <div class="col-6">
         <div class="line">
@@ -133,6 +141,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   padding-top: 4rem;
+
   .logo {
     .hidden {
       display: none;
@@ -148,9 +157,44 @@ export default {
     }
   }
   .col-6 {
-    img {
-      width: 100%;
-      padding: 2rem;
+    &.world {
+      position: relative;
+
+      .info {
+        background-color: white;
+        position: absolute;
+        top: 150px;
+        left: 150px;
+        padding: 0.25rem 1rem;
+        box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.218);
+      }
+
+      img {
+        width: 100%;
+        padding: 2rem;
+
+        &.new-york,
+        &.sydney,
+        &.helsinki {
+          width: 5rem;
+        }
+
+        &.new-york {
+          position: absolute;
+          top: 90px;
+          left: 120px;
+        }
+        &.sydney {
+          position: absolute;
+          top: 195px;
+          left: 400px;
+        }
+        &.helsinki {
+          position: absolute;
+          top: 60px;
+          left: 250px;
+        }
+      }
     }
   }
 
