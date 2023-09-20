@@ -8,11 +8,11 @@ export default {
 
 <template>
   <form>
-    <div class="form-row">
-      <div class="col">
+    <div class="form-row d-flex">
+      <div class="col-6">
         <input type="text" class="form-control" placeholder="First name" />
       </div>
-      <div class="col">
+      <div class="col-6">
         <input type="text" class="form-control" placeholder="Last name" />
       </div>
     </div>
