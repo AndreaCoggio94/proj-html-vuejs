@@ -19,7 +19,9 @@ export default {
 <template>
   <div class="container-big">
     <nav class="navbar">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">
+        <img src="/image/logo-img-01.png" alt="" />
+      </a>
       <ul class="navbar-nav">
         <li
           v-for="(card, index) in pages"
@@ -48,6 +50,11 @@ export default {
   left: 0;
   right: 0;
   nav {
+    .navbar-brand {
+      img {
+        width: 6rem;
+      }
+    }
     .navbar-nav {
       display: flex;
       flex-direction: row;

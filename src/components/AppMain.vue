@@ -6,6 +6,33 @@ import TestimonialCard from "./main/TestimonialCard.vue";
 export default {
   data() {
     return {
+      events: [
+        {
+          date: "07",
+          day: "Jan, 2022",
+          completeDate: "Jan, 7 2022",
+          what: "Melbourne Coaching",
+          hour: "9:00 am - 5:00 pm",
+          location: "Cambridge, MA 02138, USA",
+        },
+        {
+          date: "11",
+          day: "Jan, 2022",
+          completeDate: "Jan, 11 2022",
+          what: "Melbourne Coaching",
+          hour: "9:00 am - 5:00 pm",
+          location: "Cambridge, MA 02138, USA",
+        },
+        {
+          date: "21",
+          day: "Jan, 2022",
+          completeDate: "Jan, 21 2022",
+          what: "Melbourne Coaching",
+          hour: "9:00 am - 5:00 pm",
+          location: "Cambridge, MA 02138, USA",
+        },
+      ],
+
       newsActiveIndex: [0, 1, 2],
       news: [
         {
@@ -72,7 +99,7 @@ export default {
       <TeamCard></TeamCard>
     </div>
   </div>
-  <!-- Jumbotron -->
+  <!-- Jumbotron events -->
   <div class="jumbotron">
     <img src="/image/h1-img-09.jpg" alt="" />
     <div class="">
@@ -80,7 +107,19 @@ export default {
         <div class="event-top">
           <h3>Upcoming Events</h3>
         </div>
-        <div class="event-item">
+        <div v-for="(card, index) in events" class="event-item">
+          <div class="date">
+            <h4>{{ card.date }}</h4>
+            <p>{{ card.day }}</p>
+          </div>
+          <div class="event-info">
+            <h4>{{ card.what }}</h4>
+            <p><span>icon</span> {{ card.completeDate }}</p>
+            <p><span>icon</span> {{ card.location }}</p>
+            <div>READ MORE</div>
+          </div>
+        </div>
+        <!-- <div class="event-item">
           <div class="date">
             <h4>07</h4>
             <p>Jan, 2022</p>
@@ -103,19 +142,7 @@ export default {
             <p><span>icon</span> place</p>
             <div>READ MORE</div>
           </div>
-        </div>
-        <div class="event-item">
-          <div class="date">
-            <h4>07</h4>
-            <p>Jan, 2022</p>
-          </div>
-          <div class="event-info">
-            <h4>Melbourne Coaching</h4>
-            <p><span>icon</span> date</p>
-            <p><span>icon</span> place</p>
-            <div>READ MORE</div>
-          </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
