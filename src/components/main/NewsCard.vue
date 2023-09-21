@@ -22,8 +22,8 @@ export default {
   >
     <img class="" :src="'/image/' + image" :alt="image" />
     <div class="card-body">
-      <span> icon {{ date }}</span
-      ><span>icon {{ person }}</span>
+      <span> <font-awesome-icon icon="fa-regular fa-clock" /> {{ date }}</span
+      ><span><font-awesome-icon icon="fa-regular fa-user" /> {{ person }}</span>
       <h5 class="card-title">{{ title }}</h5>
       <p class="card-text">
         {{ desc }}

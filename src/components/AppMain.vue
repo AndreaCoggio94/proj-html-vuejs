@@ -84,7 +84,7 @@ export default {
           person: "Amanda Doe",
         },
       ],
-      testimonialsActiveIndex: 1,
+      testimonialsActiveIndex: 0,
       testimonials: [
         {
           name: "Cynthia Clark",
@@ -129,6 +129,7 @@ export default {
     TestimonialCard,
   },
   methods: {
+    // team card
     teamCardPrev() {
       if (this.teamCardActiveIndex < 1) {
         this.teamCardActiveIndex = this.teamCard.length - 1;
@@ -141,6 +142,25 @@ export default {
         this.teamCardActiveIndex = 0;
       } else {
         this.teamCardActiveIndex++;
+      }
+    },
+    // news card
+    newsCardPrev() {},
+    newsCardNext() {},
+    // testimonials
+    testimonialsPrev() {
+      if (this.testimonialsActiveIndex < 1) {
+        this.testimonialsActiveIndex = this.testimonials.length - 1;
+      } else {
+        this.testimonialsActiveIndex--;
+      }
+    },
+
+    testimonialsNext() {
+      if (this.testimonialsActiveIndex == this.testimonials.length - 1) {
+        this.testimonialsActiveIndex = 0;
+      } else {
+        this.testimonialsActiveIndex++;
       }
     },
   },
@@ -234,7 +254,7 @@ export default {
         </p>
       </div>
       <div class="news-carousel">
-        <div class="button prev">
+        <div class="button prev" @click="newsCardPrev">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -260,7 +280,7 @@ export default {
             :activeIndex="newsActiveIndex"
           />
         </div>
-        <div class="button next">
+        <div class="button next" @click="newsCardNext">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -281,7 +301,7 @@ export default {
     <div class="background">
       <h1>Testimonials.</h1>
       <div class="testimonials-carousel">
-        <div class="button prev">
+        <div class="button prev" @click="testimonialsPrev">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -322,7 +342,7 @@ export default {
             <p>03</p>
           </div>
         </TestimonialCard>
-        <div class="button next">
+        <div class="button next" @click="testimonialsNext">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -499,6 +519,7 @@ export default {
             height: 2px;
           }
           .hidden {
+            display: block;
             background-color: black;
             height: 2px;
           }

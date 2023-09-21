@@ -30,6 +30,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
 
 /* add icons to the library */
 library.add(
@@ -44,7 +45,8 @@ library.add(
   faTag,
   faClock,
   faMagnifyingGlass,
-  faBars
+  faBars,
+  faUser
 );
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");
