@@ -131,14 +131,6 @@ export default {
         this.news[(startIndex + 1) % this.news.length],
         this.news[(startIndex + 2) % this.news.length],
       ];
-
-      // const startIndex = this.newsActiveIndex;
-      // const displayed = [];
-      // for (let i = startIndex; i < startIndex + 3; i++) {
-      //   const index = i >= this.news.length ? i - this.news.length : i;
-      //   displayed.push(this.news[index]);
-      // }
-      // return displayed;
     },
   },
 
@@ -201,6 +193,7 @@ export default {
 <template>
   <!-- Team Members -->
   <div class="team-members">
+    <img class="float-circle" src="/svg/svg-4.svg" alt="" />
     <div class="container-small">
       <TeamCard
         v-for="(card, index) in teamCard"
@@ -278,6 +271,7 @@ export default {
   <!-- Latest news -->
   <div class="news">
     <div class="container">
+      <img class="float-circle" src="/svg/svg-4.svg" alt="" />
       <div class="news-title">
         <h2>Latest news<span class="dot">.</span></h2>
         <p class="line-center">
@@ -425,6 +419,14 @@ export default {
 <style lang="scss" scoped>
 .team-members {
   margin: 2rem 0 8rem;
+  position: relative;
+  .float-circle {
+    width: 400px;
+    position: absolute;
+    z-index: 1;
+    top: -50px;
+    right: 0;
+  }
   .container-small {
     position: relative;
   }
@@ -513,6 +515,17 @@ export default {
 .news {
   text-align: center;
   padding: 6rem 0;
+  position: relative;
+
+  .float-circle {
+    width: 400px;
+    position: absolute;
+    z-index: 1;
+
+    top: -60px;
+    left: 20px;
+  }
+
   .news-carousel {
     text-align: start;
     align-items: center;

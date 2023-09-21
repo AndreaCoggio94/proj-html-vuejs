@@ -45,7 +45,7 @@ export default {
 <style lang="scss" scoped>
 .news-card {
   width: 18rem;
-
+  z-index: 2;
   padding: 3rem 0 0;
   position: relative;
   .card-body {

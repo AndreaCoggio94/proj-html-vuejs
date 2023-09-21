@@ -69,6 +69,7 @@ img {
   width: 600px;
 }
 .card {
+  z-index: 3;
   position: absolute;
   top: 90px;
   left: 500px;
