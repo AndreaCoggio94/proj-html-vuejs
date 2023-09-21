@@ -82,6 +82,25 @@ export default {
           img: "h3-img-08.png",
         },
       ],
+
+      creativeInfo: [
+        {
+          name: "Mentorship",
+          percentage: 78,
+        },
+        {
+          name: "Education",
+          percentage: 95,
+        },
+        {
+          name: "Learning",
+          percentage: 65,
+        },
+        {
+          name: "Motivation",
+          percentage: 83,
+        },
+      ],
     };
   },
   components: {
@@ -119,30 +138,6 @@ export default {
             <div>READ MORE</div>
           </div>
         </div>
-        <!-- <div class="event-item">
-          <div class="date">
-            <h4>07</h4>
-            <p>Jan, 2022</p>
-          </div>
-          <div class="event-info">
-            <h4>Melbourne Coaching</h4>
-            <p><span>icon</span> date</p>
-            <p><span>icon</span> place</p>
-            <div>READ MORE</div>
-          </div>
-        </div>
-        <div class="event-item">
-          <div class="date">
-            <h4>07</h4>
-            <p>Jan, 2022</p>
-          </div>
-          <div class="event-info">
-            <h4>Melbourne Coaching</h4>
-            <p><span>icon</span> date</p>
-            <p><span>icon</span> place</p>
-            <div>READ MORE</div>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>
@@ -161,32 +156,14 @@ export default {
       </div>
       <div class="col-6">
         <ul>
-          <li>
-            <h5 class="col">Mentorship</h5>
-            <h5 class="col number">78%</h5>
+          <li v-for="(item, index) in creativeInfo">
+            <h5 class="col">{{ item.name }}</h5>
+            <h5 class="col number">{{ item.percentage }}%</h5>
             <div class="bar col-12">
-              <div class="over-bar" style="width: 78%"></div>
-            </div>
-          </li>
-          <li>
-            <h5 class="col">Education</h5>
-            <h5 class="col number">95%</h5>
-            <div class="bar col-12">
-              <div class="over-bar" style="width: 95%"></div>
-            </div>
-          </li>
-          <li>
-            <h5 class="col">Learning</h5>
-            <h5 class="col number">65%</h5>
-            <div class="bar col-12">
-              <div class="over-bar" style="width: 65%"></div>
-            </div>
-          </li>
-          <li>
-            <h5 class="col">Motivation</h5>
-            <h5 class="col number">83%</h5>
-            <div class="bar col-12">
-              <div class="over-bar" style="width: 83%"></div>
+              <div
+                class="over-bar"
+                :style="{ width: item.percentage + '%' }"
+              ></div>
             </div>
           </li>
         </ul>
