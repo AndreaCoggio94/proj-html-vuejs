@@ -42,4 +42,9 @@ export default {
   </form>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.form-control {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+</style>
