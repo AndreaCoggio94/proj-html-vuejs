@@ -53,7 +53,7 @@ export default {
         },
       ],
       teamCardActiveIndex: 0,
-      newsActiveIndex: [0, 1, 2],
+      newsActiveIndex: 0,
       news: [
         {
           image: "h1-blog-img-04.jpg",
@@ -123,6 +123,25 @@ export default {
       ],
     };
   },
+  computed: {
+    newsDisplayedCards() {
+      const startIndex = this.newsActiveIndex;
+      return [
+        this.news[startIndex],
+        this.news[(startIndex + 1) % this.news.length],
+        this.news[(startIndex + 2) % this.news.length],
+      ];
+
+      // const startIndex = this.newsActiveIndex;
+      // const displayed = [];
+      // for (let i = startIndex; i < startIndex + 3; i++) {
+      //   const index = i >= this.news.length ? i - this.news.length : i;
+      //   displayed.push(this.news[index]);
+      // }
+      // return displayed;
+    },
+  },
+
   components: {
     TeamCard,
     NewsCard,
@@ -146,12 +165,18 @@ export default {
     },
     // news card
     newsCardPrev() {
-      this.newsActiveIndex.splice(0, 1);
-      this.newsActiveIndex.push(3);
+      if (this.newsActiveIndex === 0) {
+        this.newsActiveIndex = this.news.length - 1;
+      } else {
+        this.newsActiveIndex--;
+      }
     },
     newsCardNext() {
-      this.newsActiveIndex.splice(3, 1);
-      this.newsActiveIndex.splice(0, 1, 3);
+      if (this.newsActiveIndex === this.news.length - 1) {
+        this.newsActiveIndex = 0;
+      } else {
+        this.newsActiveIndex++;
+      }
     },
     // testimonials
     testimonialsPrev() {
@@ -215,7 +240,7 @@ export default {
               <font-awesome-icon icon="fa-solid fa-location-dot" />
               {{ card.location }}
             </p>
-            <div>READ MORE</div>
+            <div class="button">READ MORE</div>
           </div>
         </div>
       </div>
@@ -232,7 +257,7 @@ export default {
           soluta illum eos voluptas in optio et sit vero explicabo molestias,
           cupiditate laborum!
         </p>
-        <div>READ MORE</div>
+        <div class="button">READ MORE</div>
       </div>
       <div class="col-6">
         <ul>
@@ -275,7 +300,7 @@ export default {
         </div>
         <div class="carousel">
           <NewsCard
-            v-for="(card, index) in news"
+            v-for="(card, index) in newsDisplayedCards"
             :image="card.image"
             :title="card.title"
             :desc="card.desc.substring(0, 50) + '...'"
@@ -368,6 +393,32 @@ export default {
   <div class="video-jumbotron">
     <img src="/image/h1-img-04.jpg" alt="" />
     <div class="play"><font-awesome-icon icon="fa-solid fa-play" /></div>
+    <div class="shop">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        style="height: 16px"
+        fill="#ee2852"
+      >
+        <circle cx="9" cy="21" r="2" />
+        <circle cx="20" cy="21" r="2" />
+        <path
+          d="M23.8 5.4c-.2-.3-.5-.4-.8-.4H6.8L6 .8C5.9.3 5.5 0 5 0H1C.4 0 0 .4 0 1s.4 1 1 1h3.2L5 6.2v.1l1.7 8.3C7 16 8.2 17 9.6 17H19.4c1.5 0 2.7-1 3-2.4L24 6.2c0-.3 0-.6-.2-.8z"
+        />
+      </svg>
+    </div>
+    <div class="circle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 87 87"
+        style="height: 26px"
+        fill="#fff"
+      >
+        <path
+          d="M55.4 81.5c6.1-11.1 5.2-16.1-4.3-24.3 6.1-3.5 9.5-8.5 9.1-15.7-.5-8.2-7.7-14.7-16.3-14.6-8.5.1-15.6 6.7-15.9 15-.3 8.5 5.9 15.8 14.3 16.6 1.4.1 2.8.2 4.2.5 5.9 1.2 10.2 6.7 9.8 12.6-.4 6.4-5.5 11.4-11.8 11.7-19.6.9-38.6-14.8-41.3-34C-.1 26.9 14.4 6.8 36.4 2.8c22.3-4 43.4 10 48.1 32 4.3 20-8.6 41.2-28.4 46.7h-.7z"
+        />
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -556,6 +607,39 @@ export default {
     transform: translate(-50%, -50%);
     color: white;
     font-size: 2rem;
+    cursor: pointer;
+  }
+  .shop {
+    z-index: 3;
+    position: absolute;
+    background-color: white;
+    width: 30px;
+    aspect-ratio: 1;
+    top: 30px;
+    right: 0;
+    cursor: pointer;
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .circle {
+    z-index: 3;
+    position: absolute;
+    background-color: #ef2853;
+    width: 30px;
+    aspect-ratio: 1;
+    top: -10px;
+    right: 0;
+    cursor: pointer;
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 </style>

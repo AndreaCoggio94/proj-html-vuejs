@@ -56,7 +56,7 @@ export default {
         <img class="sydney" src="/image/h1-contact-rev-02.png" alt="" />
         <div class="info">
           <h6>New York Coaching</h6>
-          <p>READ MORE</p>
+          <p class="button">READ MORE</p>
         </div>
       </div>
       <div class="col-6 contact">

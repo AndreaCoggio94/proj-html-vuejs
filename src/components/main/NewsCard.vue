@@ -10,20 +10,26 @@ export default {
     date: String,
     person: String,
     index: Number,
-    activeIndex: Array,
+    activeIndex: Number,
   },
 };
 </script>
 
+<!-- :class="activeIndex.includes(index) ? 'active' : 'hidden'" -->
 <template>
-  <div
-    class="news-card"
-    :class="activeIndex.includes(index) ? 'active' : 'hidden'"
-  >
+  <div class="news-card">
     <img class="" :src="'/image/' + image" :alt="image" />
     <div class="card-body">
-      <span> <font-awesome-icon icon="fa-regular fa-clock" /> {{ date }}</span
-      ><span><font-awesome-icon icon="fa-regular fa-user" /> {{ person }}</span>
+      <span>
+        <font-awesome-icon class="icon" icon="fa-regular fa-clock" />
+
+        <p>{{ date }}</p> </span
+      ><span
+        ><font-awesome-icon class="icon" icon="fa-regular fa-user" />
+        <p>
+          {{ person }}
+        </p>
+      </span>
       <h5 class="card-title">{{ title }}</h5>
       <p class="card-text">
         {{ desc }}
@@ -42,6 +48,15 @@ export default {
 
   padding: 3rem 0 0;
   position: relative;
+  .card-body {
+    .icon {
+      margin-right: 0.25rem;
+    }
+    p {
+      display: inline-block;
+      margin-right: 0.25rem;
+    }
+  }
   &.hidden {
     display: none;
   }

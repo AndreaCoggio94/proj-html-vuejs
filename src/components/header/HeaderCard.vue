@@ -26,6 +26,7 @@ export default {
 
   img {
     width: 8rem;
+    margin: 0.8rem 0;
   }
   p {
     // width: 6rem;

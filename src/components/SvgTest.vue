@@ -22,21 +22,3 @@ export default {
   background-color: black;
 }
 </style>
-
-<template>
-  <div class="slider">
-    <div class="slider-container" ref="sliderContainer">
-      <div
-        class="slider-wrapper"
-        :style="{ transform: `translateX(${sliderPosition}px)` }"
-      >
-        <!-- Your card components go here -->
-        <div v-for="(card, index) in cards" :key="index" class="card">
-          <!-- Card content -->
-        </div>
-      </div>
-    </div>
-    <button @click="prevSlide">Previous</button>
-    <button @click="nextSlide">Next</button>
-  </div>
-</template>
