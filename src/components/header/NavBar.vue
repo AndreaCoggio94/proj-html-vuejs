@@ -56,7 +56,7 @@ export default {
   nav {
     .navbar-brand {
       img {
-        width: 6rem;
+        width: 8rem;
       }
     }
     .navbar-nav {
@@ -76,7 +76,8 @@ export default {
             color: #ff4612;
             &::before {
               content: url(/svg/svg-6-orange.svg);
-              scale: 0.6;
+              scale: 0.8 0.5;
+              margin-top: 5px;
             }
           }
         }

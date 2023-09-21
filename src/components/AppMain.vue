@@ -421,11 +421,11 @@ export default {
   margin: 2rem 0 8rem;
   position: relative;
   .float-circle {
-    width: 400px;
+    width: 300px;
     position: absolute;
     z-index: 1;
-    top: -50px;
-    right: 0;
+    top: -40px;
+    right: 60px;
   }
   .container-small {
     position: relative;
@@ -443,9 +443,10 @@ export default {
     top: 120px;
     left: 210px;
     z-index: 3;
-    background-color: white;
+    background-color: #fafafa;
 
     display: inline-block;
+
     h3 {
       font-size: 1.25rem;
     }
@@ -480,7 +481,7 @@ export default {
 
 .creative {
   padding: 6rem 0;
-  background-color: #ffffff33;
+  background-color: #ffffff;
   .col-6 {
     p {
       padding-right: 1rem;
@@ -518,12 +519,12 @@ export default {
   position: relative;
 
   .float-circle {
-    width: 400px;
+    width: 350px;
     position: absolute;
     z-index: 1;
 
     top: -60px;
-    left: 20px;
+    left: 60px;
   }
 
   .news-carousel {
