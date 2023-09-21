@@ -4,7 +4,18 @@ import HeaderCard from "./header/HeaderCard.vue";
 
 export default {
   data() {
-    return {};
+    return {
+      jumbotron: [
+        {
+          img: "/image/rev-slider-main-home-img-03.jpg",
+        },
+
+        {
+          img: "/image/rev-slider-main-home-img-02.png",
+        },
+      ],
+      jumbotronActiveIndex: 0,
+    };
   },
   components: {
     NavBar,
@@ -13,17 +24,38 @@ export default {
   props: {
     specialties: Array,
   },
+  methods: {
+    prev() {
+      if (this.jumbotronActiveIndex < 1) {
+        this.jumbotronActiveIndex = 1;
+      } else {
+        this.jumbotronActiveIndex--;
+      }
+    },
+    next() {
+      if (this.jumbotronActiveIndex > 0) {
+        this.jumbotronActiveIndex = 0;
+      } else {
+        this.jumbotronActiveIndex++;
+      }
+    },
+  },
 };
 </script>
 
 <template>
   <div class="jumbotron">
-    <img src="/image/rev-slider-main-home-img-03.jpg" alt="" />
+    <img
+      v-for="(slide, index) in jumbotron"
+      :class="jumbotronActiveIndex == index ? 'active' : 'hidden'"
+      :src="slide.img"
+      alt=""
+    />
     <!-- Navbar -->
     <NavBar />
     <!-- Jumbotron -->
     <div class="container-big team d-flex">
-      <div class="button prev">
+      <div class="button prev" @click="prev">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -46,7 +78,7 @@ export default {
         <div class="btn">READ MORE</div>
         <div class="btn">PURCHASE</div>
       </div>
-      <div class="button next">
+      <div class="button next" @click="next">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -84,7 +116,12 @@ export default {
 <style lang="scss" scoped>
 .jumbotron {
   position: relative;
-
+  .active {
+    display: block;
+  }
+  .hidden {
+    display: none;
+  }
   .team {
     position: absolute;
     left: 0;

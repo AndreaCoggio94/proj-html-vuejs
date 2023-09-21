@@ -39,6 +39,10 @@ $background-black-quaternary: #181515;
 
 // button
 
+.button {
+  cursor: pointer;
+}
+
 .prev {
   transform: rotate(180deg);
 }

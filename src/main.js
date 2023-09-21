@@ -23,6 +23,8 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 // regular
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
@@ -40,7 +42,9 @@ library.add(
   faEnvelope,
   faPlay,
   faTag,
-  faClock
+  faClock,
+  faMagnifyingGlass,
+  faBars
 );
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");

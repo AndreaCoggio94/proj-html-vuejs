@@ -32,10 +32,14 @@ export default {
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">search</a>
+          <a class="nav-link" href="#"
+            ><font-awesome-icon icon="fa-solid fa-magnifying-glass"
+          /></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">burgermenu</a>
+          <a class="nav-link" href="#"
+            ><font-awesome-icon icon="fa-solid fa-bars"
+          /></a>
         </li>
       </ul>
     </nav>
