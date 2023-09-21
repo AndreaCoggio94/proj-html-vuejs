@@ -62,6 +62,7 @@ export default {
     </div>
   </div>
   <!-- Specialties -->
+  <slot></slot>
   <div class="specialties container-big">
     <div class="container-small">
       <div class="line-center">
