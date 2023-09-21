@@ -83,22 +83,31 @@ export default {
           nulla suscipit sint maiores placeat optio, animi adipisci praesentium
           delectus.
         </p>
-        <span>icons</span>
+        <font-awesome-icon icon="fa-brands fa-linkedin-in" /><font-awesome-icon
+          icon="fa-brands fa-facebook-f"
+        /><font-awesome-icon class="icon" icon="fa-brands fa-twitter" />
       </div>
       <!-- Twitter -->
       <div class="footer-item col">
-        <div class="twitter">
+        <div class="footer-twitter">
           <h5 class="line">Twitter</h5>
-          <ul>
-            <li>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
-              perspiciatis, corrupti quae atque dolores soluta.
-            </li>
-            <li>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
-              perspiciatis, corrupti quae atque dolores soluta.
-            </li>
-          </ul>
+
+          <div class="d-flex">
+            <div class="twitter">
+              <font-awesome-icon class="icon" icon="fa-brands fa-twitter" />
+              <div>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
+                perspiciatis, corrupti quae atque dolores soluta.
+              </div>
+            </div>
+            <div class="twitter">
+              <font-awesome-icon class="icon" icon="fa-brands fa-twitter" />
+              <div>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
+                perspiciatis, corrupti quae atque dolores soluta.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- important links -->
@@ -117,9 +126,16 @@ export default {
         <div class="contact">
           <h5 class="line">Contact me</h5>
           <ul>
-            <li>icon Lorem, ipsum.</li>
-            <li>icon Lorem, ipsum.</li>
-            <li>icon Lorem, ipsum.</li>
+            <li>
+              <font-awesome-icon icon="fa-solid fa-location-dot" /> Lorem,
+              ipsum.
+            </li>
+            <li>
+              <font-awesome-icon icon="fa-solid fa-phone" /> Lorem, ipsum.
+            </li>
+            <li>
+              <font-awesome-icon icon="fa-regular fa-envelope" /> Lorem, ipsum.
+            </li>
           </ul>
           <form action="#">
             <div class="form-row d-flex">
@@ -131,7 +147,11 @@ export default {
       </div>
     </div>
     <div class="copyright">
-      <p>Copyright Everlead@MikadoThemes</p>
+      <p>
+        Copyright Everlead<font-awesome-icon
+          icon="fa-regular fa-copyright"
+        />MikadoThemes
+      </p>
     </div>
   </footer>
 </template>
@@ -219,16 +239,30 @@ footer {
     display: flex;
     justify-content: space-between;
     .footer-item {
-      .twitter {
-        li {
-          padding-left: 1rem;
-          text-indent: -1rem;
+      .footer-twitter {
+        .d-flex {
+          flex-direction: column;
+          .twitter {
+            display: flex;
+            .icon {
+              padding: 0.25rem;
+              padding-right: 1rem;
+            }
+          }
         }
 
-        li:before {
-          content: "X";
-          padding-right: 5px;
-        }
+        // li {
+        //   padding-left: 1rem;
+        //   text-indent: -1rem;
+        // }
+
+        // li.twitter:before {
+
+        //   // content: "\f099";
+        //   font-family: "Font Awesome 6 brands";
+        //   font-weight: 400;
+        //   // padding-right: 5px;
+        // }
       }
       .contact {
       }
