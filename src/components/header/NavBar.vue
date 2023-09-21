@@ -65,7 +65,8 @@ export default {
           a {
             color: #ff4612;
             &::before {
-              content: "->";
+              content: url(/svg/svg-6.svg);
+              fill: brown;
             }
           }
         }
