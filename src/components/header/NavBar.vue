@@ -61,12 +61,18 @@ export default {
       justify-content: space-between;
       width: 60%;
       .nav-item {
+        display: flex;
+        align-items: center;
+        a {
+          display: flex;
+          align-items: center;
+        }
         &.active {
           a {
             color: #ff4612;
             &::before {
-              content: url(/svg/svg-6.svg);
-              fill: brown;
+              content: url(/svg/svg-6-orange.svg);
+              scale: 0.6;
             }
           }
         }
