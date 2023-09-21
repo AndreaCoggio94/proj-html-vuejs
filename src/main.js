@@ -13,14 +13,20 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 /* import specific icons */
+// brands
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+
+// solid
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
+
+// regular
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faClock } from "@fortawesome/free-regular-svg-icons";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 
 /* add icons to the library */
@@ -33,7 +39,8 @@ library.add(
   faPhone,
   faEnvelope,
   faPlay,
-  faTag
+  faTag,
+  faClock
 );
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");

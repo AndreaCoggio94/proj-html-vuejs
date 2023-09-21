@@ -133,8 +133,15 @@ export default {
           </div>
           <div class="event-info">
             <h4>{{ card.what }}</h4>
-            <p><span>icon</span> {{ card.completeDate }}</p>
-            <p><span>icon</span> {{ card.location }}</p>
+            <p>
+              <font-awesome-icon icon="fa-regular fa-clock" />{{
+                card.completeDate
+              }}
+            </p>
+            <p>
+              <font-awesome-icon icon="fa-solid fa-location-dot" />
+              {{ card.location }}
+            </p>
             <div>READ MORE</div>
           </div>
         </div>
