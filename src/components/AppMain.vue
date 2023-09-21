@@ -453,11 +453,13 @@ export default {
 
     .event-top {
       padding: 1rem 1rem 1.25rem 1.5rem;
+      box-shadow: 0 0.1rem rgba(0, 0, 0, 0.077);
     }
     .event-item {
       padding: 1rem 1rem 1.25rem 1.5rem;
       display: flex;
       font-size: 0.8rem;
+      box-shadow: 0 0.1rem rgba(0, 0, 0, 0.077);
 
       h4 {
         font-size: 1rem;
