@@ -37,6 +37,12 @@ $background-black-quaternary: #181515;
 //   -webkit-font-smoothing: antialiased;
 // }
 
+// button
+
+.prev {
+  transform: rotate(180deg);
+}
+
 .dot {
   color: $background-orange;
 }
