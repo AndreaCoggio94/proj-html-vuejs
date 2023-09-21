@@ -552,8 +552,9 @@ export default {
 
 .testimonials {
   .background {
-    color: black;
-    background-color: rgb(45, 42, 42);
+    color: rgba(0, 0, 0, 0.449);
+
+    background-color: #1e1c1c;
     position: relative;
     padding-bottom: 20rem;
 
