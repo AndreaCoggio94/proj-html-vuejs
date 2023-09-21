@@ -259,7 +259,19 @@ export default {
     <div class="background">
       <h1>Testimonials.</h1>
       <div class="testimonials-carousel">
-        <div class="button">arrow</div>
+        <div class="button prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            style="height: 32px"
+            fill="#fff"
+          >
+            <path
+              d="M4 15a1 1 0 001 1h19.586l-4.292 4.292a1 1 0 001.414 1.414l6-6a.99.99 0 00.292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 00-.216-.324l-6-6a1 1 0 00-1.414 1.414L24.586 14H5a1 1 0 00-1 1z"
+            />
+          </svg>
+        </div>
 
         <TestimonialCard
           v-for="(card, index) in testimonials"
@@ -288,7 +300,19 @@ export default {
             <p>03</p>
           </div>
         </TestimonialCard>
-        <div class="button">arrow</div>
+        <div class="button next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            style="height: 32px"
+            fill="#fff"
+          >
+            <path
+              d="M4 15a1 1 0 001 1h19.586l-4.292 4.292a1 1 0 001.414 1.414l6-6a.99.99 0 00.292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 00-.216-.324l-6-6a1 1 0 00-1.414 1.414L24.586 14H5a1 1 0 00-1 1z"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </div>
@@ -419,6 +443,12 @@ export default {
       justify-content: space-between;
       color: white;
       .button {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        &.prev {
+          transform: rotate(180deg);
+        }
       }
       .amount-counter {
         display: flex;
