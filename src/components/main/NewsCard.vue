@@ -30,7 +30,9 @@ export default {
       </p>
       <a href="#" class="btn">READ MORE</a>
     </div>
-    <div class="tag">icon Business, Leading</div>
+    <div class="tag">
+      <font-awesome-icon icon="fa-solid fa-tag" /> Business, Leading
+    </div>
   </div>
 </template>
 

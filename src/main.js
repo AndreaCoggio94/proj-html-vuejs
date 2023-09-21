@@ -19,6 +19,7 @@ import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faTag } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 
@@ -31,7 +32,8 @@ library.add(
   faFacebookF,
   faPhone,
   faEnvelope,
-  faPlay
+  faPlay,
+  faTag
 );
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");

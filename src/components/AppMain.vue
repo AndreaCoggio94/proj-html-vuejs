@@ -203,7 +203,19 @@ export default {
         </p>
       </div>
       <div class="news-carousel">
-        <div class="button">arrow</div>
+        <div class="button prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            style="height: 32px"
+            fill="#1e1c1c"
+          >
+            <path
+              d="M4 15a1 1 0 001 1h19.586l-4.292 4.292a1 1 0 001.414 1.414l6-6a.99.99 0 00.292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 00-.216-.324l-6-6a1 1 0 00-1.414 1.414L24.586 14H5a1 1 0 00-1 1z"
+            />
+          </svg>
+        </div>
         <div class="carousel">
           <NewsCard
             v-for="(card, index) in news"
@@ -216,41 +228,20 @@ export default {
             :index="index"
             :activeIndex="newsActiveIndex"
           />
-          <!-- <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div> -->
-          <!-- </div> -->
         </div>
-        <div class="button">arrow</div>
+        <div class="button next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            style="height: 32px"
+            fill="#1e1c1c"
+          >
+            <path
+              d="M4 15a1 1 0 001 1h19.586l-4.292 4.292a1 1 0 001.414 1.414l6-6a.99.99 0 00.292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 00-.216-.324l-6-6a1 1 0 00-1.414 1.414L24.586 14H5a1 1 0 00-1 1z"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </div>
@@ -412,6 +403,14 @@ export default {
     align-items: center;
     display: flex;
     justify-content: space-between;
+
+    .button {
+      color: #1e1c1c;
+      fill: currentColor;
+      &.prev {
+        transform: rotate(180deg);
+      }
+    }
     .carousel {
       flex-grow: 1;
       display: flex;
