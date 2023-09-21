@@ -295,7 +295,7 @@ export default {
   <!-- Video Jumbotron -->
   <div class="video-jumbotron">
     <img src="/image/h1-img-04.jpg" alt="" />
-    <div class="play">play</div>
+    <div class="play"><font-awesome-icon icon="fa-solid fa-play" /></div>
   </div>
 </template>
 
