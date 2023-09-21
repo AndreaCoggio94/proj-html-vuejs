@@ -33,6 +33,7 @@ export default {
 
   img {
     width: 6rem;
+    margin-bottom: 1rem;
   }
   &.hidden {
     display: none;

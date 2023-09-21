@@ -61,7 +61,7 @@ export default {
       </div>
       <div class="col-6 contact">
         <div class="line">
-          <h2>Contact us <span class="dot">.</span></h2>
+          <h2>Contact us<span class="dot">.</span></h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <FooterForm />
@@ -91,7 +91,7 @@ export default {
   <footer>
     <div class="container">
       <!-- About -->
-      <div class="footer-item col">
+      <div class="footer-item about col">
         <h5 class="line">About</h5>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam minus
@@ -99,9 +99,15 @@ export default {
           nulla suscipit sint maiores placeat optio, animi adipisci praesentium
           delectus.
         </p>
-        <font-awesome-icon icon="fa-brands fa-linkedin-in" /><font-awesome-icon
-          icon="fa-brands fa-facebook-f"
-        /><font-awesome-icon class="icon" icon="fa-brands fa-twitter" />
+        <span class="icon">
+          <font-awesome-icon icon="fa-brands fa-linkedin-in" />
+        </span>
+        <span class="icon">
+          <font-awesome-icon icon="fa-brands fa-facebook-f" />
+        </span>
+        <span class="icon">
+          <font-awesome-icon icon="fa-brands fa-twitter" />
+        </span>
       </div>
       <!-- Twitter -->
       <div class="footer-item col">
@@ -112,15 +118,19 @@ export default {
             <div class="twitter">
               <font-awesome-icon class="icon" icon="fa-brands fa-twitter" />
               <div>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
-                perspiciatis, corrupti quae atque dolores soluta.
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
+                  perspiciatis, corrupti quae atque dolores soluta.
+                </p>
               </div>
             </div>
             <div class="twitter">
               <font-awesome-icon class="icon" icon="fa-brands fa-twitter" />
               <div>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
-                perspiciatis, corrupti quae atque dolores soluta.
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
+                  perspiciatis, corrupti quae atque dolores soluta.
+                </p>
               </div>
             </div>
           </div>
@@ -130,33 +140,41 @@ export default {
       <div class="footer-item col">
         <h5 class="line">Important links</h5>
         <ul>
-          <li>Lorem, ipsum.</li>
-          <li>Lorem, ipsum.</li>
-          <li>Lorem, ipsum.</li>
-          <li>Lorem, ipsum.</li>
-          <li>Lorem, ipsum.</li>
+          <li><p>Lorem, ipsum.</p></li>
+          <li><p>Lorem, ipsum.</p></li>
+          <li><p>Lorem, ipsum.</p></li>
+          <li><p>Lorem, ipsum.</p></li>
+          <li><p>Lorem, ipsum.</p></li>
         </ul>
       </div>
       <!-- Contact me -->
       <div class="footer-item col">
         <div class="contact">
           <h5 class="line">Contact me</h5>
-          <ul>
-            <li>
-              <font-awesome-icon icon="fa-solid fa-location-dot" /> Lorem,
-              ipsum.
-            </li>
-            <li>
-              <font-awesome-icon icon="fa-solid fa-phone" /> Lorem, ipsum.
-            </li>
-            <li>
-              <font-awesome-icon icon="fa-regular fa-envelope" /> Lorem, ipsum.
-            </li>
-          </ul>
+
+          <div>
+            <p>
+              <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
+              Lorem, ipsum.
+            </p>
+          </div>
+          <div>
+            <p>
+              <font-awesome-icon class="icon" icon="fa-solid fa-phone" />
+              Lorem, ipsum.
+            </p>
+          </div>
+          <div>
+            <p>
+              <font-awesome-icon class="icon" icon="fa-regular fa-envelope" />
+              Lorem, ipsum.
+            </p>
+          </div>
+
           <form action="#">
             <div class="form-row d-flex">
               <input type="text" class="form-control" placeholder="Your name" />
-              <button class="btn btn-success" type="submit">Subscribe</button>
+              <div class="button" type="submit">SUBSCRIBE</div>
             </div>
           </form>
         </div>
@@ -251,11 +269,31 @@ export default {
 }
 
 footer {
+  font-size: 0.8rem;
   background-color: black;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  p {
+    padding: 0.25rem 0;
+  }
+  .about {
+    padding-right: 0.25rem;
+
+    .icon {
+      color: black;
+      border-radius: 50%;
+      background-color: white;
+      font-size: 0.8rem;
+      margin-top: 1rem;
+      margin-right: 1rem;
+      width: 20px;
+      text-align: center;
+      aspect-ratio: 1;
+      display: inline-block;
+    }
+  }
   .container {
     padding: 4rem 0;
     display: flex;
@@ -272,21 +310,21 @@ footer {
             }
           }
         }
-
-        // li {
-        //   padding-left: 1rem;
-        //   text-indent: -1rem;
-        // }
-
-        // li.twitter:before {
-
-        //   // content: "\f099";
-        //   font-family: "Font Awesome 6 brands";
-        //   font-weight: 400;
-        //   // padding-right: 5px;
-        // }
       }
       .contact {
+        .icon {
+          padding-right: 0.5rem;
+        }
+        form {
+          border-bottom: 2px solid white;
+          padding: 0.25rem 0;
+          .form-control {
+            background-color: black;
+            border: none;
+          }
+          .button {
+          }
+        }
       }
     }
   }
@@ -296,8 +334,11 @@ footer {
     justify-content: center;
     align-items: center;
     display: flex;
+
     p {
+      font-size: 0.6rem;
       margin: 0;
+      padding: 0.25rem 0;
     }
   }
 }

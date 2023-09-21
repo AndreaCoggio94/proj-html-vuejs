@@ -37,6 +37,26 @@ $background-black-quaternary: #181515;
 //   -webkit-font-smoothing: antialiased;
 // }
 
+// fonts
+
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Libre Baskerville', serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+}
+
+* {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+}
+
 // button
 
 .button {
@@ -47,8 +67,45 @@ $background-black-quaternary: #181515;
   transform: rotate(180deg);
 }
 
+.btn-white,
+.btn-orange {
+  height: auto;
+  font-size: 0.6rem;
+  margin: 0.25rem 1rem 0.25rem 0;
+  cursor: pointer;
+  display: flex;
+  width: 7rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  .text {
+    text-align: center;
+    flex-grow: 1;
+  }
+  .vertical-line {
+    background-color: currentColor;
+    width: 2px;
+    height: 80%;
+  }
+  svg {
+    scale: 0.6;
+    fill: currentColor;
+  }
+}
+
+.btn-white {
+  background-color: white;
+}
+
+.btn-orange {
+  color: white;
+  background-color: $background-orange;
+}
+
 .dot {
   color: $background-orange;
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .active {

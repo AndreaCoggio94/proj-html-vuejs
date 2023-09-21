@@ -40,19 +40,19 @@ export default {
           image: "h1-img-01",
         },
         {
-          name: "Jason Bickford",
-          role: "Founder and Executive Director",
+          name: "Arwin Helper",
+          role: "Co-Founder and communication expert",
           desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus nisi voluptatum quo fuga fugit nulla nesciunt, iste eos tempore impedit voluptates debitis modi atque facere, corrupti earum, iusto laborum? A.",
           image: "h1-img-02",
         },
         {
-          name: "Jason Bickford",
-          role: "Founder and Executive Director",
+          name: "Lorem Ipsum",
+          role: "Founder and lorem ipsum master",
           desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus nisi voluptatum quo fuga fugit nulla nesciunt, iste eos tempore impedit voluptates debitis modi atque facere, corrupti earum, iusto laborum? A.",
           image: "h1-img-03",
         },
       ],
-      teamCardActiveIndex: 2,
+      teamCardActiveIndex: 0,
       newsActiveIndex: [0, 1, 2],
       news: [
         {
@@ -145,8 +145,14 @@ export default {
       }
     },
     // news card
-    newsCardPrev() {},
-    newsCardNext() {},
+    newsCardPrev() {
+      this.newsActiveIndex.splice(0, 1);
+      this.newsActiveIndex.push(3);
+    },
+    newsCardNext() {
+      this.newsActiveIndex.splice(3, 1);
+      this.newsActiveIndex.splice(0, 1, 3);
+    },
     // testimonials
     testimonialsPrev() {
       if (this.testimonialsActiveIndex < 1) {
@@ -422,13 +428,20 @@ export default {
 .creative {
   padding: 6rem 0;
   background-color: #ffffff33;
+  .col-6 {
+    p {
+      padding-right: 1rem;
+      padding-bottom: 0.25rem;
+    }
+  }
   ul {
+    padding-top: 1.25rem;
     li {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      // width: 100%;
-      // background-color: red;
+      padding: 0.25rem 0 1rem 0;
+
       .number {
         text-align: end;
       }
@@ -476,6 +489,7 @@ export default {
     background-color: rgb(45, 42, 42);
     position: relative;
     padding-bottom: 20rem;
+
     h1 {
       font-size: 10rem;
       text-align: center;
@@ -535,11 +549,13 @@ export default {
     width: 100%;
   }
   .play {
-    position: absolute;
     z-index: 3;
+    position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
+    font-size: 2rem;
   }
 }
 </style>

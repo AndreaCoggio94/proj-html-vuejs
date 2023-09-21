@@ -5,6 +5,14 @@ import * as bootstrap from "bootstrap";
 import "./style.scss";
 import { createApp } from "vue";
 import App from "./App.vue";
+import WebFontLoader from "webfontloader";
+
+WebFontLoader.load({
+  google: {
+    families: ["Raleway:200,300", "Libre Baskerville:400", "Roboto:400"],
+  },
+  active: function () {},
+});
 
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
