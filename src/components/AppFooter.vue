@@ -3,7 +3,35 @@ import FooterForm from "./footer/FooterForm.vue";
 
 export default {
   data() {
-    return {};
+    return {
+      logos: [
+        {
+          normal: "h4-clients-img-01",
+          orange: "h4-clients-img-02",
+          order: 5,
+        },
+        {
+          normal: "h4-clients-img-03",
+          orange: "h4-clients-img-04-1",
+          order: 1,
+        },
+        {
+          normal: "h4-clients-img-05",
+          orange: "h4-clients-img-06-1",
+          order: 2,
+        },
+        {
+          normal: "h4-clients-img-07",
+          orange: "h4-clients-img-08-1",
+          order: 3,
+        },
+        {
+          normal: "h4-clients-img-09",
+          orange: "h4-clients-img-10-1",
+          order: 4,
+        },
+      ],
+    };
   },
   components: {
     FooterForm,
@@ -31,7 +59,7 @@ export default {
           <p>READ MORE</p>
         </div>
       </div>
-      <div class="col-6">
+      <div class="col-6 contact">
         <div class="line">
           <h2>Contact us <span class="dot">.</span></h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -39,34 +67,22 @@ export default {
         <FooterForm />
       </div>
       <div class="col-12">
-        <!-- <span v-for="(n, index) in 10">
+        <div
+          v-for="(logo, index) in logos"
+          class="logo"
+          :style="{ order: logo.order }"
+        >
           <img
-            :src="n % 2 ? '/image/h4-clients-img-0' + n + '.png' : ''"
-            @click="questa"
-            alt=""
+            class="active"
+            :src="'/image/' + logo.normal + '.png'"
+            :alt="logo.normal"
           />
-        </span> -->
-        <!-- <img v-for="n in 10" src="" alt="" /> -->
-        <div class="logo">
-          <img class="active" src="/image/h4-clients-img-03.png" alt="logo" />
 
-          <img class="hidden" src="/image/h4-clients-img-04-1.png" alt="logo" />
-        </div>
-        <div class="logo">
-          <img class="active" src="/image/h4-clients-img-05.png" alt="logo" />
-          <img class="hidden" src="/image/h4-clients-img-06-1.png" alt="logo" />
-        </div>
-        <div class="logo">
-          <img class="active" src="/image/h4-clients-img-07.png" alt="logo" />
-          <img class="hidden" src="/image/h4-clients-img-08-1.png" alt="logo" />
-        </div>
-        <div class="logo">
-          <img class="active" src="/image/h4-clients-img-09.png" alt="logo" />
-          <img class="hidden" src="/image/h4-clients-img-10-1.png" alt="logo" />
-        </div>
-        <div class="logo">
-          <img class="active" src="/image/h4-clients-img-01.png" alt="logo" />
-          <img class="hidden" src="/image/h4-clients-img-02.png" alt="logo" />
+          <img
+            class="hidden"
+            :src="'/image/' + logo.orange + '.png'"
+            :alt="logo.orange"
+          />
         </div>
       </div>
     </div>
@@ -216,6 +232,12 @@ export default {
         }
       }
     }
+
+    &.contact {
+      .line {
+        margin-bottom: 2rem;
+      }
+    }
   }
 
   .col-12 {
@@ -223,7 +245,7 @@ export default {
     justify-content: space-between;
     padding: 4rem 0;
     img {
-      width: 8rem;
+      width: 6rem;
     }
   }
 }
