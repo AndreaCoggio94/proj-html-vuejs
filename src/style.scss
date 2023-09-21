@@ -51,6 +51,14 @@ $background-black-quaternary: #181515;
   color: $background-orange;
 }
 
+.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
 ul {
   list-style-type: none;
   margin: 0;

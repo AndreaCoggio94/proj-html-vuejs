@@ -32,7 +32,27 @@ export default {
           location: "Cambridge, MA 02138, USA",
         },
       ],
-
+      teamCard: [
+        {
+          name: "Jason Bickford",
+          role: "Founder and Executive Director",
+          desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus nisi voluptatum quo fuga fugit nulla nesciunt, iste eos tempore impedit voluptates debitis modi atque facere, corrupti earum, iusto laborum? A.",
+          image: "h1-img-01",
+        },
+        {
+          name: "Jason Bickford",
+          role: "Founder and Executive Director",
+          desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus nisi voluptatum quo fuga fugit nulla nesciunt, iste eos tempore impedit voluptates debitis modi atque facere, corrupti earum, iusto laborum? A.",
+          image: "h1-img-02",
+        },
+        {
+          name: "Jason Bickford",
+          role: "Founder and Executive Director",
+          desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus nisi voluptatum quo fuga fugit nulla nesciunt, iste eos tempore impedit voluptates debitis modi atque facere, corrupti earum, iusto laborum? A.",
+          image: "h1-img-03",
+        },
+      ],
+      teamCardActiveIndex: 2,
       newsActiveIndex: [0, 1, 2],
       news: [
         {
@@ -108,6 +128,22 @@ export default {
     NewsCard,
     TestimonialCard,
   },
+  methods: {
+    teamCardPrev() {
+      if (this.teamCardActiveIndex < 1) {
+        this.teamCardActiveIndex = this.teamCard.length - 1;
+      } else {
+        this.teamCardActiveIndex--;
+      }
+    },
+    teamCardNext() {
+      if (this.teamCardActiveIndex == this.teamCard.length - 1) {
+        this.teamCardActiveIndex = 0;
+      } else {
+        this.teamCardActiveIndex++;
+      }
+    },
+  },
 };
 </script>
 
@@ -115,7 +151,18 @@ export default {
   <!-- Team Members -->
   <div class="team-members">
     <div class="container-small">
-      <TeamCard></TeamCard>
+      <TeamCard
+        v-for="(card, index) in teamCard"
+        :image="card.image"
+        :role="card.role"
+        :desc="card.desc.substring(0, 200) + '...'"
+        :name="card.name"
+        :key="index"
+        :index="index"
+        :activeIndex="teamCardActiveIndex"
+        @prev="teamCardPrev"
+        @next="teamCardNext"
+      ></TeamCard>
     </div>
   </div>
   <!-- Jumbotron events -->

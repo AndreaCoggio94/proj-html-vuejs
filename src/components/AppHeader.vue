@@ -130,6 +130,12 @@ export default {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+
+    .button {
+      display: flex;
+      align-items: center;
+      height: 200px;
+    }
     .info {
       p {
         width: 45%;
