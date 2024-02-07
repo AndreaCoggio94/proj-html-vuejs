@@ -104,7 +104,11 @@ img {
   }
   &.next {
     bottom: 0;
-    left: 40px;
+    left: 60px;
+    svg {
+      position: relative;
+      bottom: -2px;
+    }
   }
 }
 </style>
